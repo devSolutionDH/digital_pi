@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head')  %>
+    <body>
+        <%- include('./partials/header')  %>
+        <main>   
+            <div class="container-filter">
+                <label for="car"></label>
+                <select name="car" id="car">
+                    <option value=" " selected disabled>Selecione o carro</option>
+                    <option value="audi-a3">Audi A3</option>
+                    <option value="cruze">Cruze</option>
+                    <option value="toro">Toro</option>
+                </select>
+            </div>   
+            <div class="container-box">
+                <div class="box-1">
+                    <p id="total-value">R$ 1554,00</p>
+                    <p class="title-box">Total</p>
+                </div>
+                <div class="box-2">
+                    <p id="total-value">R$ 8 446,00</p>
+                    <p class="title-box">Saldo</p>
+                </div>
+                <div class="box-3">
+                    <p id="total-value">2</p>
+                    <p class="title-box">oficinas</p>
+                </div>
+            </div>
+            <div class="container-data">
+                <h3>Historico de serviços</h3>
+                <table id="table-service">
+                    <tr>
+                      <th>Tipo de serviço</th>
+                      <th>Valor</th>
+                      <th>Status</th>
+                    </tr>
+                    <tr>
+                      <td>Troca de pneu</td>
+                      <td>R$ 1000,00</td>
+                      <td class="status finish">Concluido</td>
+                    </tr>
+                    <tr>
+                      <td>Revisão de 10k</td>
+                      <td>R$ 500,00</td>
+                      <td class="status running">Em andamento</td>
+                    </tr>
+                    <tr>
+                        <td>Motor</td>
+                        <td>R$ 7500,00</td>
+                        <td class="status cancel">Cancelado</td>
+                      </tr>
+                  </table>
+            </div>
+        </main>
+        <%- include('./partials/footer')  %>
+    </body>
+</html>

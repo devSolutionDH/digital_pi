@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200&family=Heebo:wght@100&family=Kanit:wght@600&family=Montserrat&family=Prompt:ital,wght@0,200;1,300&family=Source+Sans+Pro:ital,wght@0,300;1,300&family=Square+Peg&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+   --preto: #000; 
+   --darklight: rgb(83, 82, 82);
+   --dark: rgb(44, 43, 43);
+   --branco: #fff;
+   --laranja: #ff7a00;
+   --verde: #003e47;
+}
+
+body{
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: 'Anek Tamil', sans-serif;
+}
+
+
+
+
+main .section-dados {
+    display: inline-flex;
+    margin: 10px;
+    align-items: center;
+}
+
+main .section-dados img{
+    width: 8vw;
+    height: 15vh;
+    border-radius: 50%;
+    border: 1px solid var(--laranja);
+    margin: 10px;
+}
+
+
+main .section-dados label{
+    color: var(--laranja);
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+main .section-dados input{
+    color: var(--branco);
+    background-color: var(--preto);
+    border: none;
+}
+
+main .section-form{
+    text-align: left;
+    margin: 10px;
+}
+
+main .section-form input{
+    background-color: var(--verde);
+    color: var(--branco);
+    width: 20vw;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid var(--darklight);
+}
+
+main .section-grafico-oficina,
+main .section-grafico-manutencao{
+    margin: 10px;
+    text-align: center;
+}
+
+main .section-grafico-manutencao p,
+main .section-grafico-oficina p{
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+main .section-grafico-oficina img,
+main .section-grafico-manutencao img{
+    width: 30vw;
+    height: 20VH;
+    margin: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--laranja);
+}
+
+/*
+*************************************
+******** MOBILE ****************
+*************************************
+*/
+@media (max-width: 400px){
+
+    main .section-dados img{
+        width: 20vw;
+        height: 10vh;
+        display: inline-flex;
+    }
+    
+    main .section-dados label{
+        font-size: 1.2rem;
+        font-weight: bolder;
+    }
+
+    main .section-dados input{
+        font-size: 0.85rem;
+    }
+
+    main .section-form input{
+        margin: 10px;
+        width: 90vw;
+    }
+    
+    main .section-grafico-oficina,
+    main .section-grafico-manutencao{
+        margin: 10px;
+        text-align: center;
+    }
+    
+    main .section-grafico-oficina p,
+    main .section-grafico-manutencao p{
+        font-size: 1rem;
+        margin: 20px 0 0 0;
+    }
+    
+    main .section-grafico-oficina img,
+    main .section-grafico-manutencao img{
+        width: 90vw;
+        margin: 10px;
+    }
+}

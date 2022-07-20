@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200&family=Heebo:wght@100&family=Kanit:wght@600&family=Montserrat&family=Prompt:ital,wght@0,200;1,300&family=Source+Sans+Pro:ital,wght@0,300;1,300&family=Square+Peg&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+   --preto: #000; 
+   --dark: rgb(44, 43, 43);
+   --branco: #fff;
+   --laranja: #ff7a00;
+    --verde: #003e47;
+}
+
+body{
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: 'Anek Tamil', sans-serif;
+}
+
+header{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+    background-color: var(--preto);
+    border: 1px solid var(--preto);
+    box-shadow: 2px 1px 20px 1px var(--dark);
+    margin: 0 0 20px 0;
+    height: 8vh;
+    width: 100vw;
+    list-style: none;
+}
+
+header .bar{
+    margin-left: 20px;
+}
+
+header .bar #menu,
+header .bar #nav-menu{
+    display: none;
+    transition: all 0.6s ease-in-out;
+}
+
+header i{
+    cursor: pointer;
+}
+
+header .bar #menu:checked + #nav-menu{
+    display: block;
+    position: fixed;
+    left:0;
+    top: 8%;
+    height: 100vh;
+    width: 15%;
+    z-index: 100000;
+    text-align: left;
+    background-color: var(--dark);
+    border-top-right-radius: 4px;
+    animation: menuEffects 0.8s  ease-in;
+}
+
+header .bar #nav-menu ul li{
+    display: block;
+    justify-content: space-between;
+}
+
+header .bar #nav-menu ul li a:hover{
+    color: var(--laranja);
+    transition: all 0.8s;
+}
+
+header .bar #nav-menu ul li a{
+    text-decoration: none;
+    color: var(--branco);
+    transition: all 0.8s;
+}
+
+header .bar #nav-menu ul li a i{
+    margin: 20px 50px 20px 15px;
+}
+
+header #logo{
+    width: 220px;
+    height: 50px;
+}
+
+
+
+
+
+footer{
+    margin: 40px 10px 0 10px;
+    border-top: 1px solid var(--dark) ;
+    text-align: center;
+}
+
+footer #nav-footer ul{
+    list-style: none;
+}
+
+footer #nav-footer ul li{
+    display: inline-flex;
+    margin: 10px;
+}
+
+footer #nav-footer ul li a{
+    text-decoration: none;
+    color: var(--branco);
+}
+
+footer #nav-footer ul li a:hover{
+    color: var(--dark);
+}
+    
+footer #nav-footer ul li a i{
+    font-size: 2.5vh;
+}
+
+
+
+/*
+*********************************
+******** Parte mobile ***********
+*********************************
+*/
+@media (max-width: 400px){
+
+    header .bar #menu:checked + #nav-menu{
+        left:0;
+        top: 8%;
+        height: 100vh;
+        width: 60vw;
+    }
+
+    footer{
+       height: 5vh;
+    }
+
+    footer #nav-footer ul{
+        margin: 20px;
+    }
+  
+}
+
+@keyframes menuEffects{
+    0%{opacity: 0;}
+    25%{opacity: 0.25;}
+    50%{opacity: 0.50;}
+    75%{opacity: 0.75;}
+    100%{opacity: 1;}
+}
+
+
+
+
+

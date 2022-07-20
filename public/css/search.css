@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200&family=Heebo:wght@100&family=Kanit:wght@600&family=Montserrat&family=Prompt:ital,wght@0,200;1,300&family=Source+Sans+Pro:ital,wght@0,300;1,300&family=Square+Peg&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+   --preto: #000; 
+   --dark: rgb(44, 43, 43);
+   --darklight: rgb(83, 82, 82);
+   --branco: #fff;
+   --laranja: #ff7a00;
+   --verde: #003e47;
+}
+
+
+
+
+
+main #section-img{
+    text-align: center;
+}
+
+main #section-img .mobile{
+    display: none;
+}
+
+main h2{
+    text-align: center;
+    color: var(--branco);
+}
+
+
+
+main #section-form{
+    display: inline-block;
+    margin: 40px;
+}
+
+main #section-form i{
+    color: var(--branco);
+    margin-right: 5px;
+}
+
+main #section-form input{
+    border-radius: 5px;
+    border: 1px solid var(--darklight);
+    color: var(--branco);
+    background-color: var(--preto);
+    padding: 5px;
+    margin: 10px;
+    transition: 0.8s;
+}
+
+main #section-form #address{
+    width: 450px;
+}
+
+main #section-form input:hover{
+    border: 1px solid var(--branco);
+    background-color: var(--verde);
+    color: var(--branco);
+    transition: 0.8s;
+}
+
+main #section-form input::placeholder{
+    color: var(--laranja);
+}
+
+
+main #section-form #btn-buscar{
+    border-radius: 5px;
+    border: 1px solid var(--laranja);
+    color: var(--branco);
+    background-color: var(--preto);
+    transition: 0.8s;
+    width: 100px;
+    height: 25px;
+    margin: 35px;
+}
+
+main #section-form #btn-buscar:hover{
+    border: 1px solid var(--branco);
+    background-color: var(--verde);
+    transition: 0.8s;
+}
+
+
+
+main #section-map{
+    display: inline-flex;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+main #section-map #iframe-map{
+    width: 97vw;
+    height: 60vh;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+
+
+
+/*
+ *********************************
+ ********** Para mobile **********
+ *********************************
+*/
+@media (max-width: 480px){
+    
+    main h2{
+        font-size: 1.2rem;
+    }
+
+    main #section-img .mobile{
+        display: inline-block;
+        height: 30vh;
+        width: 92vw;
+    }   
+
+
+    main #section-form{
+        text-align: left;
+        margin: 0 10px 0 10px;
+    } 
+
+    main #section-form #zip-code{
+        width: 30vw;
+    }
+
+    main #section-form #address{
+        width: 80vw;
+    }
+
+    main #section-form #btn-buscar{
+        width: 70px;
+        height: 25px;
+        margin: 5px 0 5px 30px; 
+    }
+
+
+    main #section-map{
+        text-align: center;
+        margin: 10px;
+        height: 30vh;
+    }
+    
+    main #section-map #iframe-map{
+        width: 95vw;
+        height: 30vh;
+        margin: 20px 0 10px 0;
+    }  
+
+}

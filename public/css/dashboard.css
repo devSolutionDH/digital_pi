@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200&family=Heebo:wght@100&family=Kanit:wght@600&family=Montserrat&family=Prompt:ital,wght@0,200;1,300&family=Source+Sans+Pro:ital,wght@0,300;1,300&family=Square+Peg&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --preto: #000; 
+    --dark: rgb(44, 43, 43);
+    --branco: #fff;
+    --laranja: #ff7a00;
+    --verde: #003e47;
+    --vermelho: rgba(255, 0, 0, 0.418);
+    --amarelo: rgba(230, 230, 8, 0.404);
+ }
+
+ body{
+    color: var(--branco);
+ }
+
+
+
+
+
+
+  main .container-filter{
+    margin: 20px;
+  }
+
+  main .container-filter #car{
+    padding: 2px;
+    width: 200px;
+    height: 2rem;
+    border-radius: 6px;
+    border: 1px solid var(--dark);
+    background-color: var(--preto);
+    color: var(--laranja);
+    text-align: center;
+  }
+
+
+  main .container-box{
+    display: flex;
+    justify-content: center;
+}
+
+  main .box-1,
+  main .box-2,
+  main .box-3{
+      margin: 20px;
+      width: 20vw;
+      height: 15vh;
+      border-radius: 6px;
+      border: 1px solid var(--dark);
+      justify-content: center;
+      text-align: center;      
+   }
+
+  main .container-box #total-value{
+      color: var(--branco);
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 20px;
+  }
+
+  
+  main .container-box .title-box{
+      color: var(--laranja);
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 3px;
+  }
+
+  main .container-data h3{
+    text-align: center;
+    color: var(--branco);
+    margin: 20px 0 30px 0;
+  }
+
+
+
+/*
+*********** MOBILE ***************
+*/
+ @media (max-width: 400px){
+
+    main .container-filter #car{
+        width: 150px;
+      }
+
+    main .container-box{
+        display: inline-block;
+    }
+
+    main .box-1,
+    main .box-2,
+    main .box-3{
+        width: 90vw;
+        height: 10vh;       
+     }
+
+    main .container-box #total-value{
+        font-size: 2rem;
+        margin: 5px;
+    }
+
+    main .container-box .title-box{
+        font-size: 1rem;
+    }
+
+
+
+
+    main .container-data #table-service{
+        text-align: center;
+        width: 90vw;
+    }   
+
+    main .container-data #table-service tr th{
+       color: var(--branco);
+       background-color: var(--dark);
+       border-radius: 7px;
+    }
+
+    main .container-data #table-service .status{
+        border-radius: 10px;
+    }
+
+    main .container-data #table-service .finish{
+        background-color: var(--verde);
+    }
+    main .container-data #table-service .running{
+        background-color: var(--amarelo);
+    }
+    main .container-data #table-service .cancel{
+        background-color: var(--vermelho);
+    }
+ }

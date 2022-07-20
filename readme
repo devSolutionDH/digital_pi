@@ -1,0 +1,39 @@
+Projeto integrador Digital House.
+
+Objetivo: Colocar em pratica todo aprendizado do curso web full stack, gerando um portifolio para possiveis contratações no mercado de trabalho. 
+
+Time responsavel pelo projeto: Júlio Vieira, Carlos Eduardo e Felipe.
+
+
+Telas:
+
+* src/views/index: Possui dados das ultimas atualizações, além de contatos e opções de serviços.
+* src/views/cadastro: Permite que o usuário se cadastre na plataforma, assim terá acesso aos serviços que oferecemos.
+* src/views/login: Permite que usuários realizem o acesso de suas contas na plataforma.
+* src/views/perfil: Permite o usuário ter acesso detalhado dos serviços realizados, além de seus status e valores.
+* src/views/buscar: Permite o usuário buscar oficinas a partir do CEP informado.
+* src/views/filas: Permite o usuário acompanhar as filas de atendimento, status e valores de cada serviço prestado.
+
+
+Frameworks, NPM:
+
+* EJS;
+* Express;
+* Path;
+* Nodemon;
+* Method-override
+* Multer
+  
+
+Estrutura de pastas: 
+
+* Public (arquivos estaticos)
+    - css
+    - image
+
+* SRC (padrão MVC)
+    - controllers
+    - database
+    - routes
+    - views
+

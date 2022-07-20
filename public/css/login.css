@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200&family=Heebo:wght@100&family=Kanit:wght@600&family=Montserrat&family=Prompt:ital,wght@0,200;1,300&family=Source+Sans+Pro:ital,wght@0,300;1,300&family=Square+Peg&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+   --preto: #000; 
+   --darklight: rgb(83, 82, 82);
+   --dark: rgb(44, 43, 43);
+   --branco: #fff;
+   --laranja: #ff7a00;
+   --verde: #003e47;
+}
+
+body{
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: 'Anek Tamil', sans-serif;
+}
+
+
+main #container{
+    text-align: center;
+}
+
+main #container img{
+    height: 35vh;
+    width: 40vw;
+    margin: 10px;
+    border-radius: 8px;
+    animation: loginEffects;
+    transition: all 2s ease-in;
+}
+
+main #container h3{
+    color: var(--branco);
+    margin: 60px;
+}
+
+main #container i {
+    color: var(--branco);
+}
+
+main #container input{
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid var(--darklight);
+    background-color: var(--preto);
+    color: var(--branco);
+    width: 250px;
+    margin: 10px;
+    transition: all 0.5s;
+}
+
+main #container input::placeholder{
+    color: var(--laranja);
+}
+
+main #container input:focus,
+main #container input::selection,
+main #container input:hover{
+    background-color: var(--verde);
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    transition: all 0.5s;
+}
+
+main #container #links-bar ul{
+    list-style: none;
+    margin: 20px;
+}
+
+main #container #links-bar ul li a{
+    text-decoration: none;
+    color: var(--white);
+    transition: all 0.5s;
+}
+
+main #container #links-bar ul li a:hover{
+    color: var(--laranja);
+    transition: all 0.5s;
+}
+
+main #container #links-bar ul li{
+    text-align: left;
+    margin-left: 43vw ;
+}
+
+main #container #btn-entrar{
+    background-color: var(--preto);
+    border: 1px solid var(--laranja);
+    border-radius: 5px;
+    color: var(--branco);
+    width: 100px;
+    height: 30px;
+    transition: all 0.5s;
+    margin-top: 20px;
+}
+
+main #container #btn-entrar:hover{
+    background-color: var(--verde);
+    border: 1px solid var(--branco);
+    transition: all 0.5s ease-in;
+}
+
+
+
+/*
+**********************************
+****** Para Mobile ************
+**********************************
+*/
+@media (max-width: 400px){
+    
+    main #container img{
+        height: 20vh;
+        width: 90vw;
+        animation: loginEffects;
+        transition: all 2s ease-in;
+    }
+
+    main #container h3{
+        margin: 60px;
+    }
+
+    main form{
+        margin-bottom: 100px;
+    }
+
+    main #container input{
+        width: 70vw;
+    }
+
+    main #container #btn-entrar{
+        width: 80px;
+    }
+
+    main #container #links-bar ul li{
+        text-align: left;
+        margin-left: 20px ;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head')  %>
+    <body>
+        <%- include('./partials/header')  %>
+        <main>
+            <div id="container">
+                <img src="<%= picture %>" alt="Logo do site - Um homem mexendo no carro">
+                <h3>Bem vindo(a)!</h3>
+                <form action="/auth/login" method="post">
+                    <p>
+                        <label for="email"><i class="fa-solid fa-envelope"></i></label>
+                        <input type="email" name="email" id="email" placeholder="exemplo@gmail.com">
+                    <p>
+                    <p>
+                        <label for="password"><i class="fa-solid fa-key"></i></label>
+                        <input type="password" name="password" id="password" placeholder="Senha">
+                    </p>
+                    <nav id="links-bar">
+                        <ul>
+                            <li><a href="">Esqueceu a senha?</a></li>
+                            <li><a href="/auth/register">Criar conta</a></li>
+                        </ul>
+                    </nav>   
+                    <button type="submit" id="btn-entrar">Entrar</button> 
+                </form>
+            </div>
+        </main>
+        <%- include('./partials/footer')  %>
+    </body>
+</html> 

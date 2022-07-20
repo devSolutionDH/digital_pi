@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200&family=Heebo:wght@100&family=Kanit:wght@600&family=Montserrat&family=Prompt:ital,wght@0,200;1,300&family=Source+Sans+Pro:ital,wght@0,300;1,300&family=Square+Peg&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+   --preto: #000; 
+   --dark: rgb(44, 43, 43);
+   --darklight: rgb(83, 82, 82);
+   --branco: #fff;
+   --laranja: #ff7a00;
+   --verde: #003e47;
+}
+
+body{
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: 'Anek Tamil', sans-serif;
+}
+
+
+
+
+main .section-foto{
+    text-align: center;
+}
+
+main .section-foto img{
+    width: 40vw;
+    height: 35vh;
+}
+
+main .section-foto h3{
+    font-size: 1.5rem;
+    margin: 10px;
+    color:var(--branco);
+    text-align: center;
+}
+
+main .section-principal {
+    text-align: center;
+}
+
+main .section-principal label{
+    color: var(--laranja);
+    margin: 10px;
+}
+
+main .section-principal input{
+    color: var(--branco);
+    background-color: var(--preto);
+    border: 1px solid var(--darklight);
+    border-radius: 4px;
+    padding: 2px;
+    margin: 10px;
+    width: 30vw;
+}
+
+main .section-principal input::placeholder{
+    color: #000;
+}
+
+main #btn-cadastrar,
+main #btn-limpar {
+    border: 2px solid var(--laranja);
+    border-radius: 5px;
+    background-color: var(--preto);
+    color: var(--branco);
+    height: 35px;
+    width: 80px;
+    margin: 20px 10px 0px;
+    transition: 0.8s;
+}
+
+main #btn-cadastrar:hover,
+main #btn-limpar:hover{
+    border: 2px solid var(--branco);
+    background-color: var(--verde);
+    transition: 0.8s;
+}
+
+main .section-principal input[type="file"]{
+    display:none;
+}
+
+main .section-principal .custom-file-upload{
+    background-color: var(--preto);
+    color: var(--laranja);
+    border-radius: 6px;
+    border: 0;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-block;
+    align-items: center;
+    margin: 20px;
+    padding: 3px;
+    width: 120px;
+    transition: 0.8s;
+}
+
+main .section-principal .custom-file-upload:hover{
+    color: var(--darklight);
+}
+
+
+
+@media (max-width: 400px){
+
+    
+    main .section-foto img{
+        width: 90vw;
+        height: 30vh;
+    }
+
+    main .section-foto h3{
+        font-size: 1.2rem;
+    }
+    
+    main .section-principal p{
+        display: inline-flex;
+    }
+
+    main .section-principal p label{
+        display: none;
+    }
+
+    main .section-principal p input{
+        padding: 2px;
+        margin: 8px;
+        width: 90vw;
+    }
+
+    main .section-principal #cpf,
+    main .section-principal #date-birthday,
+    main .section-principal #cep,
+    main .section-principal #cel{
+        width: 43vw;
+    }
+
+
+    main .section-principal input::placeholder{
+        padding: 5px;
+        color: var(--laranja);
+    }
+
+    main .section-principal .custom-file-upload{
+        font-size: 0.9rem;
+        margin: 10px;
+        padding: 3px;
+        width: 90vw;
+    }
+
+    main #btn-cadastrar,
+    main #btn-limpar {
+        height: 4vh;
+        width: 20vw;
+        margin: 20px 10px 0px;
+        transition: 0.8s;
+    }
+
+
+
+}

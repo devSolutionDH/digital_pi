@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200&family=Heebo:wght@100&family=Kanit:wght@600&family=Montserrat&family=Prompt:ital,wght@0,200;1,300&family=Source+Sans+Pro:ital,wght@0,300;1,300&family=Square+Peg&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+   --preto: #000; 
+   --dark: rgb(44, 43, 43);
+   --branco: #fff;
+   --laranja: #ff7a00;
+   --verde: #003e47;
+}
+
+body{
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: 'Anek Tamil', sans-serif;
+}
+
+
+
+
+main{
+    text-align: center;
+}
+
+main #section-principal .mobile{
+    display: none;
+}
+
+main #section-principal .desktop{
+    width: 30vw;
+    height: 45vh;
+    border: 1px solid var(--preto);
+    box-shadow: 2px 1px 20px 1px var(--dark);
+    margin: 10px;
+}
+
+main #section-principal h2{
+    color: var(--branco);
+    margin: 10px;
+}
+
+main #section-secundaria div{
+    display: inline-block;
+    border: 1px solid var(--preto);
+    box-shadow: 2px 1px 20px 1px var(--dark);
+    width: 20vw;
+    height: 20vh;
+    justify-content: space-between;
+    text-align: center;
+}
+
+main #section-secundaria i{
+    color: var(--laranja);
+    margin: 10px;
+}
+
+
+
+/*
+*********************************
+******** Parte mobile ***********
+*********************************
+*/
+@media (max-width: 400px){
+
+    main #section-principal h2{
+       font-size: 1.2rem;
+    }
+
+    main #section-principal .desktop{
+        display: none;
+    }
+
+    main #section-principal .mobile{
+        display: flex;
+        height: 55vh;
+        width: 95vw;
+        margin: 10px;
+        box-shadow: var(--preto);
+    }
+
+    main #section-secundaria div{
+        display: inline-block;
+        border: 1px solid var(--preto);
+        box-shadow: 2px 1px 20px 1px var(--dark);
+        width: 45vw;
+        height: 8vh;
+        margin: 5px;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+}
+
+
+
+
+
