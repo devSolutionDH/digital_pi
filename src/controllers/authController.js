@@ -17,13 +17,34 @@ const authController = {
 
     login: (request, response) => {
 
-        console.table(request.body);
+            const { user, password } = request.body;
+            const users = JSON.parse(fs.readFileSync(usersPath));
 
-        return response.render('profile', {
-            title: 'Perfil - Dev Solution',
-            cssType: '/css/profile.css',
-            picture: '/image/Editada para perfil finclass (2).jpg'
-        });
+            const userFound = users.find(item => item.user === user);
+
+            if(!userFound){
+                return response.status(401).render('login', { 
+                    title: 'Login - Dev Solution',
+                    cssType: '/css/login.css',
+                    picture: '/image/login.png'
+                });
+            };
+            
+            const checkPassword = bcrypt.compareSync(password, userFound.password);
+
+            if(!checkPassword){
+                return response.status(401).render('login', { 
+                    title: 'Login - Dev Solution',
+                    cssType: '/css/login.css',
+                    picture: '/image/login.png'
+                });
+            };
+        
+            return response.render('profile', {
+                title: 'Perfil - Dev Solution',
+                cssType: '/css/profile.css',
+                picture: '/image/Editada para perfil finclass (2).jpg'
+            });
     },
 
     registerScreen: (request, response) => {
@@ -36,34 +57,32 @@ const authController = {
 
     create: (request, response) => {
 
-       const users = JSON.parse(fs.readFileSync(usersPath));
-       const {name, email, cpf, birthday, cep, cel, address, user, password, file} = request.body;
-       const passwordHash = bcrypt.hashSync(password);
-
-       const newUser = {
-            id: uuid(),
-            name: name,
-            email: email,
-            cpf: cpf,
-            birthday: birthday,
-            cep: cep,
-            cel: cel,
-            address: address,
-            user: user,
-            password: passwordHash,
-            file: file
-       };
+        const users = JSON.parse(fs.readFileSync(usersPath));
+        const {name, email, cpf, birthday, cep, cel, address, user, password, file} = request.body;
         
-       users.push(newUser);
+        const newUser = {
+                id: uuid(),
+                name: name,
+                email: email,
+                cpf: cpf,
+                birthday: birthday,
+                cep: cep,
+                cel: cel,
+                address: address,
+                user: user,
+                password: bcrypt.hashSync(password),
+                file: file
+        };
+            
+        users.push(newUser);
 
-       fs.writeFileSync(usersPath, JSON.stringify(users));
-        console.log(users); 
+        fs.writeFileSync(usersPath, JSON.stringify(users));
 
-        return response.render('login', { 
-            title: 'Login - Dev Solution',
-            cssType: '/css/login.css',
-            picture: '/image/login.png'
-        });
+            return response.render('login', { 
+                title: 'Login - Dev Solution',
+                cssType: '/css/login.css',
+                picture: '/image/login.png'
+            });
         
     },
     
