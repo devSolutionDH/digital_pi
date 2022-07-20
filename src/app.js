@@ -20,5 +20,4 @@ app.use('/', mainRoutes);
 app.use('/auth', authRoutes);
 app.use('/user', usersRoutes);
 
-
 app.listen(4000, () => console.log('Server start'));

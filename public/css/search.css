@@ -70,7 +70,7 @@ main #section-form input::placeholder{
 }
 
 
-main #section-form #btn-buscar{
+main #section-form #btn-search{
     border-radius: 5px;
     border: 1px solid var(--laranja);
     color: var(--branco);
@@ -81,7 +81,7 @@ main #section-form #btn-buscar{
     margin: 35px;
 }
 
-main #section-form #btn-buscar:hover{
+main #section-form #btn-search:hover{
     border: 1px solid var(--branco);
     background-color: var(--verde);
     transition: 0.8s;
@@ -139,7 +139,7 @@ main #section-map #iframe-map{
         width: 80vw;
     }
 
-    main #section-form #btn-buscar{
+    main #section-form #btn-search{
         width: 70px;
         height: 25px;
         margin: 5px 0 5px 30px; 
