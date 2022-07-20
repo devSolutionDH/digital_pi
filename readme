@@ -23,7 +23,8 @@ Frameworks, NPM:
 * Nodemon;
 * Method-override
 * Multer
-  
+* uuid (v4)
+* bcrypt
 
 Estrutura de pastas: 
 
@@ -34,6 +35,10 @@ Estrutura de pastas:
 * SRC (padrão MVC)
     - controllers
     - database
+    - middlewares
     - routes
     - views
+      
+
+
 
