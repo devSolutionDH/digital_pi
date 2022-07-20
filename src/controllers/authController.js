@@ -1,5 +1,3 @@
-
-
 const authController = {
 
     loginScreen: (request, response) => {
@@ -31,16 +29,15 @@ const authController = {
 
     create: (request, response) => {
 
-        console.log(request.body);
+        console.table(request.body);
 
-        return response.redirect('/user/profile', { 
-            title: 'Perfil - Dev Solution',
-            cssType: '/css/profile.css',
-            picture: '/image/Editada para perfil finclass (2).jpg'
+        return response.render('login', { 
+            title: 'Login - Dev Solution',
+            cssType: '/css/login.css',
+            picture: '/image/login.png'
         });
     },
     
 };
-
 
 module.exports = authController;
