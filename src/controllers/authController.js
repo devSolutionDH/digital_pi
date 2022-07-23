@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const {v4: uuid} = require('uuid');
 const bcrypt = require('bcryptjs');
+const session = require('express-session');
 
 const usersPath = path.join(__dirname, '..', 'database', 'users.json');
 
@@ -39,7 +40,10 @@ const authController = {
                     picture: '/image/login.png'
                 });
             };
-        
+            
+            request.session.idUser = userFound.id;
+            request.session.isAuthorized = true;
+
             return response.render('profile', {
                 title: 'Perfil - Dev Solution',
                 cssType: '/css/profile.css',

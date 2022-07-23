@@ -120,15 +120,15 @@ main .section-principal .custom-file-upload:hover{
         font-size: 1.2rem;
     }
     
-    main .section-principal p{
+    main .section-principal div{
         display: inline-flex;
     }
 
-    main .section-principal p label{
+    main .section-principal div label{
         display: none;
     }
 
-    main .section-principal p input{
+    main .section-principal div input{
         padding: 2px;
         margin: 8px;
         width: 90vw;

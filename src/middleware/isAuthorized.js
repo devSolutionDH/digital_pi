@@ -1,0 +1,11 @@
+
+const isAuthorized = (request, response, next) => {
+    
+    if(request.session.isAuthorized){
+        return next();
+    }
+
+    return response.redirect('/auth/login');
+};
+
+module.exports = isAuthorized;

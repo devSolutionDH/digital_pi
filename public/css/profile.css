@@ -71,8 +71,8 @@ main .section-grafico-manutencao{
     text-align: center;
 }
 
-main .section-grafico-manutencao p,
-main .section-grafico-oficina p{
+main .section-grafico-manutencao div,
+main .section-grafico-oficina div{
     font-size: 1.3rem;
     margin: 10px;
 }
@@ -119,8 +119,8 @@ main .section-grafico-manutencao img{
         text-align: center;
     }
     
-    main .section-grafico-oficina p,
-    main .section-grafico-manutencao p{
+    main .section-grafico-oficina div,
+    main .section-grafico-manutencao div{
         font-size: 1rem;
         margin: 20px 0 0 0;
     }
