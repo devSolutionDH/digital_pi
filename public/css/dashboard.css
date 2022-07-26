@@ -9,27 +9,23 @@
 :root{
     --preto: #000; 
     --dark: rgb(44, 43, 43);
+    --darklight: rgb(83, 82, 82);
     --branco: #fff;
     --laranja: #ff7a00;
     --verde: #003e47;
-    --vermelho: rgba(255, 0, 0, 0.418);
-    --amarelo: rgba(230, 230, 8, 0.404);
- }
+}
 
- body{
+body{
     color: var(--branco);
- }
+}
 
 
 
-
-
-
-  main .container-filter{
+main .container-filter{
     margin: 20px;
-  }
+}
 
-  main .container-filter #car{
+main .container-filter #car{
     padding: 2px;
     width: 200px;
     height: 2rem;
@@ -38,47 +34,66 @@
     background-color: var(--preto);
     color: var(--laranja);
     text-align: center;
-  }
-
-
-  main .container-box{
-    display: flex;
-    justify-content: center;
 }
 
-  main .box-1,
-  main .box-2,
-  main .box-3{
-      margin: 20px;
-      width: 20vw;
-      height: 15vh;
-      border-radius: 6px;
-      border: 1px solid var(--dark);
-      justify-content: center;
-      text-align: center;      
-   }
-
-  main .container-box #total-value{
-      color: var(--branco);
-      font-size: 2rem;
-      font-weight: bold;
-      margin: 20px;
-  }
-
-  
-  main .container-box .title-box{
-      color: var(--laranja);
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin: 3px;
-  }
-
-  main .container-data h3{
+main .container-imageCar{
     text-align: center;
-    color: var(--branco);
-    margin: 20px 0 30px 0;
-  }
+}
 
+main .container-imageCar img{
+    box-shadow: -0.5px -0.9px 5px 1px var(--dark);
+}
+
+main.container-imageCar, 
+main .container-imageCar img{
+    border-radius: 20px;  
+    width: 90vw;
+    height: 30vh;
+}
+
+main .container-box{
+    display: flex;
+
+}
+
+main .box-1,
+main .box-2,
+main .box-3{
+    margin: 20px;
+    width: 90vw;
+    height: 10vh;   
+    border-radius: 20px;
+    background-color: var(--preto);
+    box-shadow: -0.5px -0.9px 5px 1px var(--dark);
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main .box-1 .icon i,
+main .box-2 .icon i,
+main .box-3 .icon i{
+    font-size: 2rem;
+    border-radius: 50px;
+    color: var(--darklight);   
+}
+
+main .box-1 .values,
+main .box-2 .values,
+main .box-3 .values{
+    color: var(--laranja);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+main .box-1 .info,
+main .box-2 .info,
+main .box-3 .info{
+    color: var(--darklight);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 
 
 /*
@@ -94,47 +109,6 @@
         display: inline-block;
     }
 
-    main .box-1,
-    main .box-2,
-    main .box-3{
-        width: 90vw;
-        height: 10vh;       
-     }
-
-    main .container-box #total-value{
-        font-size: 2rem;
-        margin: 5px;
-    }
-
-    main .container-box .title-box{
-        font-size: 1rem;
-    }
 
 
-
-
-    main .container-data #table-service{
-        text-align: center;
-        width: 90vw;
-    }   
-
-    main .container-data #table-service tr th{
-       color: var(--branco);
-       background-color: var(--dark);
-       border-radius: 7px;
-    }
-
-    main .container-data #table-service .status{
-        border-radius: 10px;
-    }
-
-    main .container-data #table-service .finish{
-        background-color: var(--verde);
-    }
-    main .container-data #table-service .running{
-        background-color: var(--amarelo);
-    }
-    main .container-data #table-service .cancel{
-        background-color: var(--vermelho);
-    }
  }

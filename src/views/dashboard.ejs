@@ -13,44 +13,25 @@
                     <option value="toro">Toro</option>
                 </select>
             </div>   
+            <div class="container-imageCar">
+                <img src="/image/bmw.jpg" alt="">
+            </div>
             <div class="container-box">
                 <div class="box-1">
-                    <p id="total-value">R$ 1554,00</p>
-                    <p class="title-box">Total</p>
+                    <span class="icon"><i class="fa-solid fa-sack-dollar"></i></span>
+                    <span class="info">Despesas</span>
+                    <span class="values">1554,00</span>
                 </div>
                 <div class="box-2">
-                    <p id="total-value">R$ 8 446,00</p>
-                    <p class="title-box">Saldo</p>
+                    <span class="icon"><i class="fa-solid fa-wrench"></i></span>
+                    <span class="info">Oficinas</span>
+                    <span class="values">2</span>
                 </div>
                 <div class="box-3">
-                    <p id="total-value">2</p>
-                    <p class="title-box">oficinas</p>
+                    <span class="icon"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                    <span class="info">KM</span>
+                    <span class="values">10 000</span>
                 </div>
-            </div>
-            <div class="container-data">
-                <h3>Historico de serviços</h3>
-                <table id="table-service">
-                    <tr>
-                      <th>Tipo de serviço</th>
-                      <th>Valor</th>
-                      <th>Status</th>
-                    </tr>
-                    <tr>
-                      <td>Troca de pneu</td>
-                      <td>R$ 1000,00</td>
-                      <td class="status finish">Concluido</td>
-                    </tr>
-                    <tr>
-                      <td>Revisão de 10k</td>
-                      <td>R$ 500,00</td>
-                      <td class="status running">Em andamento</td>
-                    </tr>
-                    <tr>
-                        <td>Motor</td>
-                        <td>R$ 7500,00</td>
-                        <td class="status cancel">Cancelado</td>
-                      </tr>
-                  </table>
             </div>
         </main>
         <%- include('./partials/footer')  %>
