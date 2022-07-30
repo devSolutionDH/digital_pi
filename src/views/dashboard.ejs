@@ -5,32 +5,34 @@
         <%- include('./partials/header')  %>
         <main>   
             <div class="container-filter">
-                <label for="car"></label>
-                <select name="car" id="car">
-                    <option value=" " selected disabled>Selecione o carro</option>
-                    <option value="audi-a3">Audi A3</option>
-                    <option value="cruze">Cruze</option>
-                    <option value="toro">Toro</option>
-                </select>
+                <form  method="post">
+                    <select name="car" id="car">
+                        <option value="shadow-car" selected disabled>Selecionar veiculo</option>
+                        <option value="audi-a3">Audi A3</option>
+                        <option value="cruze">Cruze</option>
+                        <option value="toro">Toro</option>
+                    </select>
+                    <input id="btn-car" type="submit" value="Analisar">
+                </form>
             </div>   
             <div class="container-imageCar">
-                <img src="/image/bmw.jpg" alt="">
+                <img src="<%= picture %>" alt="<%= desc %>" >
             </div>
             <div class="container-box">
                 <div class="box-1">
                     <span class="icon"><i class="fa-solid fa-sack-dollar"></i></span>
-                    <span class="info">Despesas</span>
-                    <span class="values">1554,00</span>
+                    <span class="info">Despesa</span>
+                    <span class="values"><%= value %></span>
                 </div>
                 <div class="box-2">
                     <span class="icon"><i class="fa-solid fa-wrench"></i></span>
                     <span class="info">Oficinas</span>
-                    <span class="values">2</span>
+                    <span class="values"><%= places %></span>
                 </div>
                 <div class="box-3">
                     <span class="icon"><i class="fa-solid fa-arrow-trend-up"></i></span>
                     <span class="info">KM</span>
-                    <span class="values">10 000</span>
+                    <span class="values"><%= km %></span>
                 </div>
             </div>
         </main>

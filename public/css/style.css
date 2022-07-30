@@ -88,10 +88,6 @@ header #logo{
     height: 50px;
 }
 
-
-
-
-
 footer{
     margin: 40px 10px 0 10px;
     border-top: 1px solid var(--dark) ;

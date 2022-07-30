@@ -6,5 +6,6 @@ const isAuthorized = require('../middleware/isAuthorized');
 
 usersRouter.get('/profile', isAuthorized, usersController.profileScreen);
 usersRouter.get('/dashboard', isAuthorized, usersController.dashboardScreen);
+usersRouter.post('/dashboard', isAuthorized, usersController.carScreen);
 
 module.exports = usersRouter;
