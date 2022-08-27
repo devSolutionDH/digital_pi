@@ -1,6 +1,7 @@
+const cepApi = require('../services/cepApi');
 
 const mainController = {
-
+    
     redirectHome:  (request, response) => {
         return response.redirect('/home');
     },
@@ -20,16 +21,22 @@ const mainController = {
         });
     },
 
-    search: (request, response) => {
+    search: async (request, response) => {        
+            try {                   
+                    const {zipcode} = request.body;
+                    const {data: foundData} = await cepApi.get(`/cep/v2/${zipcode}`);
+                    const local = `${foundData.street} - ${foundData.neighborhood}, ${foundData.city}`; 
+                    
+                    console.log('CEP: ' + zipcode);
+                    console.log('Endereço: ' + local);
 
-        console.table(request.body);
-        
-        return response.render('search', { 
-            title: 'Buscar - Dev Solution',
-            cssType: '/css/search.css',
-            picture: '/image/notebook com mão.png'
-        });
-    },
-}
+                    response.statusCode = 200;
+                    return //Como inserir o valor no inpit address?
+
+            } catch(err){
+                console.log(err.data);
+            }
+        },
+};
 
 module.exports = mainController;

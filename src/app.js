@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname,'..','public')));
 app.use(session({
     resave: true,
     saveUninitialized: true,
-    secret: 'algumSegredo'
+    secret: 'somenthingSecret'
 }));
 
 app.use('/', mainRoutes);
