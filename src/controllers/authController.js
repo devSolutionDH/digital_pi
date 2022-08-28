@@ -3,6 +3,16 @@ const path = require('path');
 const {v4: uuid} = require('uuid');
 const bcrypt = require('bcryptjs');
 const session = require('express-session');
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+    destination: function(request, file, cb){
+        cb(null, "uploads/");
+    },
+    filename: function(request, file, cb){
+        cb(null, file.originalname + Date.now() + path.extname(file.originalname));
+    }
+});
 
 const usersPath = path.join(__dirname, '..', 'database', 'users.json');
 
@@ -63,7 +73,9 @@ const authController = {
 
         const users = JSON.parse(fs.readFileSync(usersPath));
         const {name, email, cpf, birthday, cep, cel, address, user, password, file} = request.body;
-        
+            
+        console.log(request.file);
+
         const newUser = {
                 id: uuid(),
                 name: name,
@@ -87,9 +99,7 @@ const authController = {
                 cssType: '/css/login.css',
                 picture: '/image/login.png'
             });
-        
     },
-    
 };
 
 module.exports = authController;
